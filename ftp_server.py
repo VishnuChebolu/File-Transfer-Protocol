@@ -74,6 +74,7 @@ def handle(client):
                 remove(client)
             elif number == 4:
                 print(f'client has disconnected.')
+                client.close()
         elif message == 'help':
             client.send(str(menu).encode('ascii'))
             continue
